@@ -1,0 +1,64 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+UNITS
+  DATABASE MICRONS 1000 ;
+END UNITS
+
+MACRO tt_um_5tOTA
+  CLASS BLOCK SOFT ;
+  ORIGIN 0.000 0.000 ;
+  FOREIGN tt_um_5tOTA 0.000 0.000 ;
+  SIZE 161.000 BY 225.760 ;
+  PIN ua[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 151.810 0.000 152.710 1.000 ;
+    END
+  END ua[0]
+  PIN ua[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 132.495 0.000 133.395 1.000 ;
+    END
+  END ua[1]
+  PIN ua[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 113.170 0.000 114.070 1.000 ;
+    END
+  END ua[2]
+  PIN ua[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 93.850 0.000 94.750 1.000 ;
+    END
+  END ua[3]
+  PIN VDPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 156.000 0.000 161.000 225.760 ;
+    END
+  END VDPWR
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 0.000 0.000 5.000 225.760 ;
+    END
+  END VGND
+END tt_um_5tOTA
+
+END LIBRARY
