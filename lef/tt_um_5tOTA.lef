@@ -1,4 +1,3 @@
-```lef id="ql9m7p"
 VERSION 5.8 ;
 BUSBITCHARS "[]" ;
 DIVIDERCHAR "/" ;
@@ -528,4 +527,4 @@ MACRO tt_um_5tOTA
 END tt_um_5tOTA
 
 END LIBRARY
-```
+
