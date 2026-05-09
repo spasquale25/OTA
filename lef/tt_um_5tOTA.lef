@@ -447,10 +447,10 @@ VIA M1M2_C_11
   ROWCOL 2 1 ;
 END M1M2_C_11
 
-MACRO tt_um_5tOTAv2
+MACRO tt_um_5tOTA
   CLASS BLOCK SOFT ;
   ORIGIN 0 0 ;
-  FOREIGN tt_um_5tOTAv2 0 0 ;
+  FOREIGN tt_um_5tOTA 0 0 ;
   SIZE 161 BY 225.76 ;
   PIN clk
     DIRECTION INPUT ;
@@ -877,6 +877,6 @@ MACRO tt_um_5tOTAv2
     END
   END VGND
   PROPERTY CatenaDesignType "asic" ;
-END tt_um_5tOTAv2
+END tt_um_5tOTA
 
 END LIBRARY
