@@ -1,0 +1,78 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+UNITS
+  DATABASE MICRONS 1000 ;
+END UNITS
+
+MACRO tt_um_5tOTA
+  CLASS BLOCK SOFT ;
+  ORIGIN 0.0 0.0 ;
+  FOREIGN tt_um_5tOTA 0.0 0.0 ;
+  SIZE 161.000 BY 225.76 ;
+
+  # --- Analog Pins ---
+  PIN ua[0]
+    DIRECTION INPUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 151.81 0.0 152.71 1.0 ; END
+  END ua[0]
+  PIN ua[1]
+    DIRECTION INPUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 132.49 0.0 133.39 1.0 ; END
+  END ua[1]
+  PIN ua[2]
+    DIRECTION INPUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 113.17 0.0 114.07 1.0 ; END
+  END ua[2]
+  PIN ua[3]
+    DIRECTION OUTPUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 93.85 0.0 94.75 1.0 ; END
+  END ua[3]
+  PIN ua[4]
+    DIRECTION INOUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 74.53 0.0 75.43 1.0 ; END
+  END ua[4]
+  PIN ua[5]
+    DIRECTION INOUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 55.21 0.0 56.11 1.0 ; END
+  END ua[5]
+  PIN ua[6]
+    DIRECTION INOUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 35.89 0.0 36.79 1.0 ; END
+  END ua[6]
+  PIN ua[7]
+    DIRECTION INOUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 16.57 0.0 17.47 1.0 ; END
+  END ua[7]
+
+  # --- Power Pins ---
+  PIN VDPWR
+    DIRECTION INPUT ; USE POWER ;
+    PORT ; LAYER met4 ; RECT 156.0 0.0 161.0 225.76 ; END
+  END VDPWR
+  PIN VGND
+    DIRECTION INPUT ; USE GROUND ;
+    PORT ; LAYER met4 ; RECT 0.0 0.0 5.0 225.76 ; END
+  END VGND
+
+  # --- Digital Inputs (Bottom row of pins in template) ---
+  PIN clk
+    DIRECTION INPUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 143.83 224.76 144.13 225.76 ; END
+  END clk
+  PIN rst_n
+    DIRECTION INPUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 141.07 224.76 141.37 225.76 ; END
+  END rst_n
+  PIN ena
+    DIRECTION INOUT ; USE SIGNAL ;
+    PORT ; LAYER met4 ; RECT 146.59 224.76 146.89 225.76 ; END
+  END ena
+
+  # --- Mandatory Template Pins (Defining these clears the 44-pin error) ---
+  # These loop through ui_in[0-7], uo_out[0-7], uio_in[0-7], etc.
+  # Use your existing RECT coordinates for these from your original LEF.
+  # Ensure every pin has a .0 float coordinate.
+END tt_um_5tOTA
+END LIBRARY
