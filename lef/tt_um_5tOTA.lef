@@ -8,13 +8,17 @@ MACRO tt_um_5tOTA
   ORIGIN 0.000 0.000 ;
   SIZE 161.000 BY 225.760 ;
   PIN ua[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     ANTENNAGATEAREA 3.000000 ;
     PORT
       LAYER met4 ;
-        RECT 132.495 0.000 133.395 1.000 ;
+        RECT 132.490 0.000 133.390 1.000 ;
     END
   END ua[1]
   PIN ua[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     ANTENNAGATEAREA 4.000000 ;
     ANTENNADIFFAREA 0.530000 ;
     PORT
@@ -23,6 +27,8 @@ MACRO tt_um_5tOTA
     END
   END ua[0]
   PIN ua[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     ANTENNAGATEAREA 3.000000 ;
     PORT
       LAYER met4 ;
@@ -30,6 +36,8 @@ MACRO tt_um_5tOTA
     END
   END ua[2]
   PIN ua[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
     ANTENNADIFFAREA 2.120000 ;
     PORT
       LAYER met4 ;
@@ -37,6 +45,7 @@ MACRO tt_um_5tOTA
     END
   END ua[3]
   PIN VGND
+    DIRECTION INPUT ;
     USE GROUND ;
     PORT
       LAYER met4 ;
@@ -44,7 +53,8 @@ MACRO tt_um_5tOTA
     END
   END VGND
   PIN VDPWR
-    ANTENNADIFFAREA 4.894375 ;
+    DIRECTION INPUT ;
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 156.000 0.000 161.000 225.760 ;
@@ -291,42 +301,56 @@ MACRO tt_um_5tOTA
     END
   END ui_in[0]
   PIN ua[7]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 16.570 0.000 17.470 1.000 ;
     END
   END ua[7]
   PIN ua[6]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 35.890 0.000 36.790 1.000 ;
     END
   END ua[6]
   PIN ua[5]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 55.210 0.000 56.110 1.000 ;
     END
   END ua[5]
   PIN ua[4]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 74.530 0.000 75.430 1.000 ;
     END
   END ua[4]
   PIN rst_n
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 141.070 224.760 141.370 225.760 ;
     END
   END rst_n
   PIN ena
+    DIRECTION INOUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 146.590 224.760 146.890 225.760 ;
     END
   END ena
   PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     PORT
       LAYER met4 ;
         RECT 143.830 224.760 144.130 225.760 ;
@@ -399,4 +423,3 @@ MACRO tt_um_5tOTA
   END
 END tt_um_5tOTA
 END LIBRARY
-
