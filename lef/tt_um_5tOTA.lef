@@ -341,7 +341,7 @@ MACRO tt_um_5tOTA
     END
   END rst_n
   PIN ena
-    DIRECTION INOUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
       LAYER met4 ;
