@@ -1,9 +1,13 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2026 Santino Pasquale
  * SPDX-License-Identifier: Apache-2.0
  */
 
 `default_nettype none
+
+// Analog project: the 5-transistor OTA is implemented in the GDS layout (gds/tt_um_5tOTA.gds).
+// This module is an empty wrapper that defines the Tiny Tapeout pin interface.
+// ua[0] = Ibias, ua[1] = Vin1, ua[2] = Vin2, ua[3] = Vout
 
 module tt_um_5tOTA (
     input  wire       VGND,
