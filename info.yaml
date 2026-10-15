@@ -3,7 +3,7 @@ project:
   title:        "Operational Transconductance Amplifier"      # Project title
   author:       "Santino Pasquale"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Outputs current proportional to input voltage"      # One line description of what your project does
+  description:  "5-transistor OTA: output current proportional to differential input voltage"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -58,7 +58,7 @@ pinout:
   ua[0]: "Ibias"
   ua[1]: "Vin1"
   ua[2]: "Vin2"
-  ua[3]: "DiffOut"
+  ua[3]: "Vout"
   ua[4]: ""
   ua[5]: ""
 

@@ -1,36 +1,34 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# 5-Transistor OTA (SKY130) — Tiny Tapeout
 
-- [Read the documentation for project](docs/info.md)
+A compact single-stage operational transconductance amplifier designed in Cadence Virtuoso for the SKY130 process and submitted to the May 2026 Tiny Tapeout shuttle. Designed by Santino Pasquale for the Cornell Custom Silicon Systems (C2S2) RFIC subteam.
 
-## What is Tiny Tapeout?
+| Parameter | Value (schematic simulation) |
+|---|---|
+| Supply | 1.8 V |
+| Tail bias current | 5 µA |
+| Load | 5 pF |
+| DC gain | ~36 dB |
+| Unity-gain frequency | ~1.4 MHz |
+| Phase margin | ~90° |
+| Input common-mode range | ~0.9 V – 1.8 V |
+| Area | 1x2 Tiny Tapeout tile |
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+The compensation capacitor is placed off-chip to minimize silicon area.
 
-To learn more and get started, visit https://tinytapeout.com.
+- **Full design and test documentation:** [docs/info.md](docs/info.md)
+- **Layout:** [`gds/tt_um_5tOTA.gds`](gds/tt_um_5tOTA.gds) · **Abstract:** [`lef/tt_um_5tOTA.lef`](lef/tt_um_5tOTA.lef)
 
-## Analog projects
+## Pinout
 
-For specifications and instructions, see the [analog specs page](https://tinytapeout.com/specs/analog/).
+| Pin | Function |
+|---|---|
+| `ua[0]` | Ibias — 5 µA reference current input |
+| `ua[1]` | Vin1 — differential input |
+| `ua[2]` | Vin2 — differential input |
+| `ua[3]` | Vout — single-ended output (connect compensation capacitor here) |
 
-## Enable GitHub actions to build the results page
+## About Tiny Tapeout
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
-
-## Resources
-
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
-  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
+[Tiny Tapeout](https://tinytapeout.com) is an educational project that makes it affordable to manufacture small designs on a real chip. See the [analog specs](https://tinytapeout.com/specs/analog/) for details on analog projects.
