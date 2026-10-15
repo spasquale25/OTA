@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
   title:        "Operational Transconductance Amplifier"      # Project title
-  author:       "Santino pasquale"      # Your name
+  author:       "Santino Pasquale"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Outputs current porportional to input voltage"      # One line description of what your project does
+  description:  "Outputs current proportional to input voltage"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
